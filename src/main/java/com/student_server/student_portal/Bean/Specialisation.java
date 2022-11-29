@@ -30,15 +30,25 @@ public class Specialisation {
     @Column(name="credits_required",nullable = false)
     private long credits_required;
 
+    @Column(name = "image_url")
+    private String image_url;
 
-    public Specialisation( String code, String name, String description, long year, long credits_required) {
+    public Specialisation( String code, String name, String description, long year, long credits_required,String image_url) {
         this.code = code;
         this.name = name;
         this.description = description;
         this.year = year;
         this.credits_required = credits_required;
+        this.image_url = image_url;
     }
 
+    public String getImage_url() {
+        return image_url;
+    }
+
+    public void setImage_url(String image_url) {
+        this.image_url = image_url;
+    }
 
     public Specialisation() {
 
