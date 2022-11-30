@@ -1,4 +1,4 @@
-package com.esd.erp.Util;
+package com.student_server.student_portal.Util;
 
 import jakarta.ws.rs.container.*;
 import jakarta.ws.rs.core.Response;
