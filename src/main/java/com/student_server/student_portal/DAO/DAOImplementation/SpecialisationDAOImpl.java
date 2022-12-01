@@ -69,4 +69,26 @@ public class SpecialisationDAOImpl implements SpecialisationDAO {
         return false;
     }
 
+    @Override
+    public boolean updateSpecialisation(Specialisation speObj)
+    {
+        try(Session session = HibernateSessionUtil.getSession()){
+            Transaction transaction = session.beginTransaction();
+
+            session.update(speObj);
+            transaction.commit();
+            return  true;
+        }
+        catch (HibernateException exception) {
+            // if Hibernate Exception occurs return false
+            System.out.println("Hibernate Exception");
+            System.out.print(exception.getLocalizedMessage());
+            return false;
+        }
+        catch (Exception e){
+            //generalized exception class for any IO / Arithmetic Exception
+            System.out.print(e.getLocalizedMessage());
+            return false;
+        }
+    }
 }

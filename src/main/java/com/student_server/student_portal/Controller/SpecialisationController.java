@@ -49,6 +49,22 @@ public class SpecialisationController {
         }
 
 
+        @PUT
+        @Path("/update")
+        @Consumes(MediaType.APPLICATION_JSON)
+        @Produces(MediaType.TEXT_PLAIN)
+        public Response update_specialisation(Specialisation speObj)
+        {
+                System.out.println(speObj);
+
+                if(speDAO.updateSpecialisation(speObj))
+                {
+                        return  Response.status(200).entity("Success").build();
+                }
+                return  Response.status(400).entity("Failure while accepting specialisation").build();
+        }
+
+
 
 
 }

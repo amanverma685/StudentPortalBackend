@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="student_portal@localhost" uuid="e02004d3-6d4e-4cf6-bf25-ae1bbd793d0f">
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="6b9d2f69-2619-48c3-94da-262dfe7c9c15">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+/home/amanv/IdeaProjects/student_portal/src/main/resources/hibernate.cfg.xml</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/student_portal</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/student_portal?createDatabaseIfNotExist=true&amp;useSSL= false&amp;allowPublicKeyRetrieval=true</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
